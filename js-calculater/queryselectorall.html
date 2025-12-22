@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="item">Item 1</div>
+    <div class="item2">Item 2</div>
+    <p>This is a paragraph1.</p>
+    <p>This is a paragraph2.</p>
+    <p>This is a paragraph3.</p>
+    <script>
+        const items = document.querySelectorAll('.item'); // सभी .item क्लास वाले div मिलेंगे
+        console.log(items); // NodeList [div.item, div.item]
+
+        items.forEach(item => {
+            item.style.color = 'blue'; // सभी items का टेक्स्ट नीला हो जाएगा
+        });
+
+        const allParagraphs = document.querySelectorAll('p'); // सभी <p> टैग मिलेंगे
+        console.log(allParagraphs[0].textContent); // "This is a paragraph." प्रिंट होगा
+        allParagraphs[0].style.color = 'red';
+        console.log(allParagraphs);
+
+    </script>
+</body>
+
+</html>
