@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add using function</title>
+
+</head>
+<div>
+    <label for="">first number</label>
+    <input id="first" type="text" placeholder="first number">
+</div>
+<div>
+    <label for="">second number</label>
+    <input id="second" type="text" placeholder="second number">
+</div>
+<div>
+    <label for="">operator</label>
+    <input id="operator" type="text" placeholder="operator">
+</div>
+<div>
+    <label for="">output</label>
+    <input id="output" type="text" placeholder="output">
+</div>
+
+<div>
+    <button onclick="calculate()"> calculate </button>
+</div>
+
+<body>
+    <script>
+
+
+        function calculate() {
+            let f =parseFloat( document.getElementById('first').value);
+            let s = parseFloat( document.getElementById('second').value);
+            let o = document.getElementById('operator').value;
+            let out = document.getElementById('output');
+            let result = '';
+            switch (o) {
+                case "+":
+                    result = f + s;
+                    break;
+
+                case "-":
+                    result = f - s;
+                    break;
+
+                case "*":
+                    result = f * s;
+                    break;
+
+                case "/":
+                    result = f / s;
+                    break;
+
+                default:
+                    result = "invalid operator"
+
+            }
+            out.value = result;
+        }
+    </script>
+
+</body>
+
+</html>

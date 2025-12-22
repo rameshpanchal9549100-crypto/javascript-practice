@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate</title>
+</head>
+
+<body>
+    <div>
+        <label for="">Fist Number</label>
+        <input id="first" type="text" placeholder="input number">
+    </div>
+    <div>
+        <label for="">Second Number</label>
+        <input id="second" type="text" placeholder="input second number">
+    </div>
+    <div>
+        <label for="">Result</label>
+        <input id="display" type="text" disabled placeholder="display output">
+    </div>
+
+    <button id="add">+</button>
+    <button onclick="sub()">-</button>
+    <button id="multi">*</button>
+    <button onclick="divi()">/</button>
+    <button onclick="cleara()">C</button>
+    <script>
+        let btn = document.getElementById("add");
+        btn.addEventListener('click', function () {
+            // alert('this is working');
+            let first = parseFloat(document.getElementById("first").value);
+            let second = parseFloat(document.getElementById("second").value);
+            let display = document.getElementById("display");
+
+            let dis1 = first + second;
+            display.value = dis1;
+        })
+
+
+        let multii = document.getElementById("multi");
+        multii.addEventListener('click',function(){
+            
+            let first = parseFloat(document.getElementById("first").value);
+            let second = parseFloat(document.getElementById("second").value);
+            let display = document.getElementById("display");
+            let dis2 = first * second;
+            display.value = dis2;
+        })
+
+        let subt = document.getElementById("sub");
+        subt.addEventListener('click',function(){
+            let first = parseFloat(document.getElementById("first").value);
+            let second = parseFloat(document.getElementById)
+        })
+        function add() {
+            let first = parseFloat(document.getElementById("first").value);
+            let second = parseFloat(document.getElementById("second").value);
+            let display = document.getElementById("display");
+
+            let dis1 = first + second;
+            display.value = dis1;
+            console.log(dis1);
+        }
+        function sub() {
+            let first = parseFloat(document.getElementById("first").value);
+            let second = parseFloat(document.getElementById("second").value);
+            let display = document.getElementById("display");
+
+            let dis1 = first - second;
+            display.value = dis1;
+            console.log(dis1);
+        }
+        function cleara() {
+            document.getElementById('first').value = '';
+            document.getElementById('second').value = '';
+            document.getElementById('display').value = '';
+            console.log(document.getElementById('first').value = '');
+        };
+
+    </script>
+</body>
+
+</html>
